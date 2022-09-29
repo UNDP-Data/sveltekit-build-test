@@ -2,6 +2,11 @@
 
 This repository is to test building with the latest sveltekit
 
+This branch is with downgraded sveltekit and adapter-node packages as follows
+
+- "@sveltejs/adapter-node": "1.0.0-next.78",
+- "@sveltejs/kit": "1.0.0-next.355",
+
 ## settings
 
 ```zsh
