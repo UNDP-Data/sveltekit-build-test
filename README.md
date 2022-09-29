@@ -1,6 +1,8 @@
 # sveltekit-build-test
 
-This repository is to test building with the latest sveltekit
+When I was trying to upgrade our sveltekit from `1.0.0-next.355` to `1.0.0-next.504`, I faced a problem of building. Building was successfully done, but when I accessed to certain endpoints, 500 internal server error occurs.
+
+This repository is to test building with the latest sveltekit in `main` branch, and older version of sveltekit in [downgrade-sveltekit](https://github.com/UNDP-Data/sveltekit-build-test/tree/downgrade-sveltekit) branch.
 
 ## settings
 
@@ -111,6 +113,15 @@ Error: Not found: /service-worker.js
     at options.hooks.handle (file:///Users/j_igarashi/Documents/git/UNDP-Data/geohub-migration/build/server/index.js:3018:59)
     at respond (file:///Users/j_igarashi/Documents/git/UNDP-Data/geohub-migration/build/server/index.js:2871:42)
 ```
+
+- Test with old version of sveltekit and adapter-node
+
+This branch [downgrade-sveltekit](https://github.com/UNDP-Data/sveltekit-build-test/tree/downgrade-sveltekit) uses following downgraded versions.
+
+- "@sveltejs/adapter-node": "1.0.0-next.78"
+- "@sveltejs/kit": "1.0.0-next.355"
+
+All endpoints can be accessed either `yarn run dev` or `yarn run preview` or `node build`.
 
 # create-svelte
 
