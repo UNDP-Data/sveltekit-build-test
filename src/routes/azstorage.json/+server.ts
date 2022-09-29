@@ -4,14 +4,16 @@ import {
 	StorageSharedKeyCredential,
 	type ContainerItem
 } from '@azure/storage-blob';
+import { AZURE_STORAGE_ACCOUNT, AZURE_STORAGE_ACCESS_KEY } from '$env/static/private';
 
-const account = import.meta.env.VITE_AZURE_STORAGE_ACCOUNT;
-const accountKey = import.meta.env.VITE_AZURE_STORAGE_ACCESS_KEY;
-const sharedKeyCredential = new StorageSharedKeyCredential(account, accountKey);
+const sharedKeyCredential = new StorageSharedKeyCredential(
+	AZURE_STORAGE_ACCOUNT,
+	AZURE_STORAGE_ACCESS_KEY
+);
 
 export const GET: RequestHandler = async () => {
 	const blobServiceClient = new BlobServiceClient(
-		`https://${account}.blob.core.windows.net`,
+		`https://${AZURE_STORAGE_ACCOUNT}.blob.core.windows.net`,
 		sharedKeyCredential
 	);
 	const containers: ContainerItem[] = [];
