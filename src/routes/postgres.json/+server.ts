@@ -2,8 +2,8 @@ import type { RequestHandler } from './$types';
 import { error } from '@sveltejs/kit';
 import pkg from 'pg';
 const { Pool } = pkg;
-import { VITE_DATABASE_CONNECTION } from '$env/static/private';
-const connectionString = VITE_DATABASE_CONNECTION;
+import { DATABASE_CONNECTION } from '$env/static/private';
+const connectionString = DATABASE_CONNECTION;
 
 export const GET: RequestHandler = async () => {
 	const pool = new Pool({ connectionString });
