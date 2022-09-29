@@ -13,12 +13,12 @@ vi .env
 # set some environmental variables
 # for /azstorage.json endpoint
 # create and Azure Blob container and set the account name and access key
-VITE_AZURE_STORAGE_ACCOUNT=
-VITE_AZURE_STORAGE_ACCESS_KEY=
+AZURE_STORAGE_ACCOUNT=
+AZURE_STORAGE_ACCESS_KEY=
 
 # for /postgres.json endpoint
 # prepare PostgreSQL database and set the connection string for your database
-VITE_DATABASE_CONNECTION=
+DATABASE_CONNECTION=
 ```
 
 ## reproduction procedure
